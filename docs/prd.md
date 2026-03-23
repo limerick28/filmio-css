@@ -1,6 +1,6 @@
 ## 🎬 1. Visão Geral e Objetivo
 
-O Movio é uma aplicação web que permite aos usuários explorar um catálogo de filmes, visualizar informações sobre diferentes títulos e gerenciar uma lista de filmes favoritos.
+O filmio é uma aplicação web que permite aos usuários explorar um catálogo de filmes, visualizar informações sobre diferentes títulos e gerenciar uma lista de filmes favoritos.
 
 O sistema utiliza a TMDb API para obter dados atualizados sobre filmes, como título, sinopse, avaliação e imagens. Além disso, permite que usuários criem uma conta e salvem seus filmes preferidos, proporcionando uma experiência personalizada de navegação e descoberta de conteúdos.
 
