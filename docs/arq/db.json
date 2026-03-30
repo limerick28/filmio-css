@@ -1,0 +1,19 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Erick",
+      "email": "erick@email.com",
+      "senha": "123456"
+    }
+  ],
+  "favoritos": [
+    {
+      "id": "1",
+      "usuarioId": "1",
+      "filmeId": 550,
+      "titulo": "Fight Club",
+      "poster": "/poster.jpg"
+    }
+  ]
+}
