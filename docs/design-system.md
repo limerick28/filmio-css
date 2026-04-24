@@ -61,14 +61,3 @@ Regras para uso dos componentes dentro da interface do Filmio:
 
 - **Imagens:**  
   Posters de filmes devem manter proporção usando `object-fit: cover`, garantindo consistência visual.
-
----
-
-### 5. Experiência do Usuário
-
-O foco da interface é proporcionar uma navegação simples, intuitiva e visualmente agradável, facilitando a descoberta de filmes e o gerenciamento da lista de favoritos.
-
-A aplicação prioriza:
-- Clareza na exibição das informações  
-- Facilidade de navegação  
-- Feedback visual nas ações do usuário  
