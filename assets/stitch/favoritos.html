@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meus Favoritos - Filmio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg custom-navbar navbar-dark">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">FILMIO</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <form class="d-flex mx-auto" role="search" style="max-width: 500px; width: 100%;">
+            <input class="form-control glass-input me-2 rounded-pill px-4" type="search" placeholder="Busque nos favoritos..." aria-label="Search" />
+          </form>
+          <ul class="navbar-nav mb-2 mb-lg-0 align-items-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Catálogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active fw-bold text-white" href="favoritos.html">Favoritos</a>
+            </li>
+            <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+               <span class="d-flex align-items-center gap-2 text-white-50">
+                  <img src="https://i.pravatar.cc/150?img=11" alt="User" class="rounded-circle border border-primary" style="width:35px;height:35px;">
+                  <span>Erick</span>
+               </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="content-wrapper container">
+      <div class="d-flex justify-content-between align-items-end mb-4 flex-wrap mt-4">
+        <div>
+          <h2 class="h1 fw-bold brand-font text-white mb-0">Minha Lista</h2>
+          <p class="text-white-50 mb-0 mt-1">Filmes salvos para assistir depois (<span class="text-primary fw-bold">2</span> títulos)</p>
+        </div>
+      </div>
+
+      <div class="row g-4 pb-5">
+        <!-- Movie 1 -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="card movie-card h-100 position-relative">
+            <a href="detalhes.html" class="text-decoration-none">
+              <img src="https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg" class="card-img-top movie-poster" alt="Clube da Luta">
+            </a>
+            <!-- Remove Button -->
+            <button class="btn btn-sm btn-ghost position-absolute top-0 end-0 m-2 rounded-circle" style="width:35px;height:35px; padding: 0;" title="Remover dos favoritos">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg text-white" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+              </svg>
+            </button>
+            <div class="movie-info pointer-events-none">
+              <span class="movie-title">Clube da Luta</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Movie 2 -->
+        <div class="col-6 col-md-3 col-lg-2">
+          <div class="card movie-card h-100 position-relative">
+            <a href="detalhes.html" class="text-decoration-none">
+              <img src="https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg" class="card-img-top movie-poster" alt="Deadpool & Wolverine">
+            </a>
+            <!-- Remove Button -->
+            <button class="btn btn-sm btn-ghost position-absolute top-0 end-0 m-2 rounded-circle" style="width:35px;height:35px; padding: 0;" title="Remover dos favoritos">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg text-white" viewBox="0 0 16 16">
+                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+              </svg>
+            </button>
+            <div class="movie-info pointer-events-none">
+              <span class="movie-title">Deadpool & Wolverine</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer mt-auto">
+      <div class="container">
+        <p class="mb-0">&copy; 2026 Filmio. O Catálogo Premium de Cinema.</p>
+      </div>
+    </footer>
+  </body>
+</html>

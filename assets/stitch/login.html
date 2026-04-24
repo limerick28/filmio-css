@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entrar - Filmio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <style>
+      body {
+        align-items: center;
+        justify-content: center;
+        background-image: 
+          radial-gradient(circle at top left, rgba(212, 56, 0, 0.15) 0%, transparent 40%),
+          url(https://image.tmdb.org/t/p/original/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg);
+        background-size: cover;
+        background-position: center;
+        background-blend-mode: overlay;
+      }
+      .glass-card {
+        background: rgba(17, 20, 23, 0.85);
+        backdrop-filter: blur(25px);
+        border: 1px solid var(--outline-ghost);
+        border-radius: 12px;
+        padding: 3rem;
+        width: 100%;
+        max-width: 450px;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="glass-card text-center mx-3 mt-5 mb-5 mx-md-auto">
+      <a href="index.html" class="text-decoration-none">
+        <h1 class="brand-font mb-4" style="color: var(--primary); font-size: 2.5rem; letter-spacing: -1px;">FILMIO</h1>
+      </a>
+      <h2 class="h4 mb-4 text-white">Bem-vindo de volta</h2>
+      <form>
+        <div class="mb-3 text-start">
+          <label for="email" class="form-label text-white-50 small">E-mail</label>
+          <input type="email" class="form-control glass-input py-2" id="email" placeholder="nome@exemplo.com">
+        </div>
+        <div class="mb-4 text-start">
+          <div class="d-flex justify-content-between">
+            <label for="password" class="form-label text-white-50 small">Senha</label>
+            <a href="#" class="text-decoration-none small" style="color: var(--primary);">Esqueceu a senha?</a>
+          </div>
+          <input type="password" class="form-control glass-input py-2" id="password" placeholder="••••••••">
+        </div>
+        <button type="submit" class="btn btn-primary-glow w-100 py-2 mb-3">Entrar no Catálogo</button>
+      </form>
+      <p class="mt-4 mb-0 text-white-50 small">Novo por aqui? 
+        <a href="cadastro.html" class="text-white fw-bold text-decoration-none border-bottom border-secondary pb-1">Criar uma conta</a>
+      </p>
+    </div>
+  </body>
+</html>
