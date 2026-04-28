@@ -15,7 +15,7 @@ Neste projeto, utilizamos um framework UI e aplicamos customizações para refle
 
 As cores foram definidas para criar uma identidade moderna e imersiva, inspirada em plataformas de streaming.
 
-- **Cor Primária (Destaque):** `#ffb5a0`  
+- **Cor Primária (Destaque):** `#d43800`  
   _Uso:_ Botões principais, ações do usuário (login, favoritar) e elementos interativos.
 
 - **Cor Secundária (Base):** `#191c1f`  
