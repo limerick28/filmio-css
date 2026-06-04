@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="pt-BR" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Filmio | Catalogo de filmes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top filmio-navbar">
+      <div class="container">
+        <a class="navbar-brand brand-mark" href="index.html">
+          <img src="../img/filmio_no_bg.png" alt="Filmio" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNav"
+          aria-controls="mainNav"
+          aria-expanded="false"
+          aria-label="Abrir menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-lg-4 me-auto">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Catalogo</a></li>
+            <li class="nav-item"><a class="nav-link" href="favoritos.html">Favoritos</a></li>
+          </ul>
+          <form class="search-form my-3 my-lg-0" role="search">
+            <i class="bi bi-search"></i>
+            <input class="form-control" type="search" placeholder="Buscar filmes..." />
+          </form>
+          <a class="btn btn-outline-light ms-lg-3 mt-3 mt-lg-0" href="login.html">Entrar</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero-section">
+        <div class="hero-backdrop"></div>
+        <div class="container position-relative">
+          <div class="row align-items-end min-vh-100 py-5">
+            <div class="col-lg-7 col-xl-6">
+              <div class="d-flex flex-wrap gap-2 mb-3">
+                <span class="chip">Destaque</span>
+                <span class="chip">Ficcao Cientifica</span>
+              </div>
+              <h1 class="display-3 fw-bold mb-3">Descubra seu proximo filme favorito.</h1>
+              <p class="lead text-secondary mb-4">
+                Explore titulos populares, busque por nome e monte uma lista pessoal para assistir depois.
+              </p>
+              <div class="d-flex flex-wrap gap-3">
+                <a class="btn btn-primary btn-lg" href="#catalogo">
+                  <i class="bi bi-play-fill"></i>
+                  Ver catalogo
+                </a>
+                <a class="btn btn-dark btn-lg" href="favoritos.html">
+                  <i class="bi bi-heart"></i>
+                  Meus favoritos
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-4 offset-lg-1 d-none d-lg-block">
+              <aside class="spotlight-panel">
+                <span class="text-uppercase small text-secondary">Filme em foco</span>
+                <h2 class="h4 mt-2">Ecos de Neon</h2>
+                <p class="small text-secondary mb-3">
+                  Uma jornada visual por uma cidade onde memorias podem ser compradas.
+                </p>
+                <div class="d-flex align-items-center gap-2">
+                  <i class="bi bi-star-fill text-warning"></i>
+                  <strong>8.7</strong>
+                  <span class="text-secondary">/ 10</span>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block" id="catalogo">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Catalogo</p>
+              <h2>Populares agora</h2>
+            </div>
+            <button class="btn btn-outline-light btn-sm" type="button">
+              <i class="bi bi-arrow-clockwise"></i>
+              Atualizar
+            </button>
+          </div>
+          <div class="row g-4">
+            <div class="col-6 col-md-4 col-lg-3">
+              <article class="movie-card">
+                <a class="text-decoration-none" href="detalhes.html">
+                  <div class="movie-poster mb-3">
+                    <img src="https://image.tmdb.org/t/p/w780/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg" alt="Poster de Clube da Luta" />
+                    <span class="rating-badge"><i class="bi bi-star-fill text-warning"></i>8.4</span>
+                    <span class="favorite-action"><i class="bi bi-heart"></i></span>
+                  </div>
+                  <h3 class="movie-card-title text-truncate">Clube da Luta</h3>
+                  <p class="movie-meta mb-0">Drama - 1999</p>
+                </a>
+              </article>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <article class="movie-card">
+                <a class="text-decoration-none" href="detalhes.html">
+                  <div class="movie-poster mb-3">
+                    <img src="https://image.tmdb.org/t/p/w780/qJ2tW6WMUDux911r6m7haRef0WH.jpg" alt="Poster de Batman" />
+                    <span class="rating-badge"><i class="bi bi-star-fill text-warning"></i>8.5</span>
+                    <span class="favorite-action"><i class="bi bi-heart"></i></span>
+                  </div>
+                  <h3 class="movie-card-title text-truncate">Batman: O Cavaleiro das Trevas</h3>
+                  <p class="movie-meta mb-0">Acao - 2008</p>
+                </a>
+              </article>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <article class="movie-card">
+                <a class="text-decoration-none" href="detalhes.html">
+                  <div class="movie-poster mb-3">
+                    <img src="https://image.tmdb.org/t/p/w780/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg" alt="Poster de A Origem" />
+                    <span class="rating-badge"><i class="bi bi-star-fill text-warning"></i>8.4</span>
+                    <span class="favorite-action"><i class="bi bi-heart"></i></span>
+                  </div>
+                  <h3 class="movie-card-title text-truncate">A Origem</h3>
+                  <p class="movie-meta mb-0">Ficcao - 2010</p>
+                </a>
+              </article>
+            </div>
+            <div class="col-6 col-md-4 col-lg-3">
+              <article class="movie-card">
+                <a class="text-decoration-none" href="detalhes.html">
+                  <div class="movie-poster mb-3">
+                    <img src="https://image.tmdb.org/t/p/w780/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg" alt="Poster de Matrix" />
+                    <span class="rating-badge"><i class="bi bi-star-fill text-warning"></i>8.2</span>
+                    <span class="favorite-action"><i class="bi bi-heart"></i></span>
+                  </div>
+                  <h3 class="movie-card-title text-truncate">Matrix</h3>
+                  <p class="movie-meta mb-0">Ficcao - 1999</p>
+                </a>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-block section-muted">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Curadoria</p>
+              <h2>Mais bem avaliados</h2>
+            </div>
+          </div>
+          <div class="movie-rail">
+            <article class="movie-card">
+              <a class="text-decoration-none" href="detalhes.html">
+                <div class="movie-poster mb-3">
+                  <img src="https://image.tmdb.org/t/p/w780/3bhkrj58Vtu7enYsRolD1fZdja1.jpg" alt="Poster de O Poderoso Chefao" />
+                  <span class="rating-badge"><i class="bi bi-star-fill text-warning"></i>8.7</span>
+                </div>
+                <h3 class="movie-card-title text-truncate">O Poderoso Chefao</h3>
+                <p class="movie-meta mb-0">Crime - 1972</p>
+              </a>
+            </article>
+            <article class="movie-card">
+              <a class="text-decoration-none" href="detalhes.html">
+                <div class="movie-poster mb-3">
+                  <img src="https://image.tmdb.org/t/p/w780/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg" alt="Poster de Parasita" />
+                  <span class="rating-badge"><i class="bi bi-star-fill text-warning"></i>8.5</span>
+                </div>
+                <h3 class="movie-card-title text-truncate">Parasita</h3>
+                <p class="movie-meta mb-0">Suspense - 2019</p>
+              </a>
+            </article>
+            <article class="movie-card">
+              <a class="text-decoration-none" href="detalhes.html">
+                <div class="movie-poster mb-3">
+                  <img src="https://image.tmdb.org/t/p/w780/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg" alt="Poster de Interestelar" />
+                  <span class="rating-badge"><i class="bi bi-star-fill text-warning"></i>8.4</span>
+                </div>
+                <h3 class="movie-card-title text-truncate">Interestelar</h3>
+                <p class="movie-meta mb-0">Aventura - 2014</p>
+              </a>
+            </article>
+            <article class="movie-card">
+              <a class="text-decoration-none" href="detalhes.html">
+                <div class="movie-poster mb-3">
+                  <img src="https://image.tmdb.org/t/p/w780/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg" alt="Poster de Pulp Fiction" />
+                  <span class="rating-badge"><i class="bi bi-star-fill text-warning"></i>8.5</span>
+                </div>
+                <h3 class="movie-card-title text-truncate">Pulp Fiction</h3>
+                <p class="movie-meta mb-0">Crime - 1994</p>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="filmio-footer">
+      <div class="container d-flex flex-column flex-md-row justify-content-between gap-3">
+        <strong class="brand-mark footer-brand">
+          <img src="../img/filmio_no_bg.png" alt="Filmio" />
+        </strong>
+        <span>Catalogo de filmes com Bootstrap e JSON Server.</span>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmxc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../assets/js/app.js"></script>
+  </body>
+</html>

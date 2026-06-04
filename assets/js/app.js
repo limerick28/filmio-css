@@ -1,38 +1,30 @@
-import { getFilmes } from "./api.js";
+function configurarMenuMobile() {
+  const toggler = document.querySelector(".navbar-toggler");
 
-const container = document.getElementById("filmes");
+  if (!toggler) {
+    return;
+  }
 
-async function carregarFilmes() {
-  const data = await getFilmes();
+  const target = toggler.dataset.bsTarget;
+  const menu = target ? document.querySelector(target) : null;
 
-  container.innerHTML = "";
+  if (!menu || window.bootstrap) {
+    return;
+  }
 
-  data.results.forEach((filme) => {
-    container.innerHTML += `
-      <div class="col-6 col-md-3 col-lg-2">
-        <div class="card bg-dark text-light h-100 border-0 shadow">
-          
-          <img 
-            src="https://image.tmdb.org/t/p/w500${filme.poster_path}" 
-            class="card-img-top"
-          >
+  toggler.addEventListener("click", () => {
+    const isOpen = menu.classList.toggle("show");
+    toggler.setAttribute("aria-expanded", String(isOpen));
+  });
 
-          <div class="card-body d-flex flex-column">
-            <h6 class="card-title">${filme.title}</h6>
-            
-            <p class="small text-secondary">
-              ⭐ ${filme.vote_average}
-            </p>
-
-            <button class="btn btn-outline-light mt-auto">
-              Favoritar
-            </button>
-          </div>
-
-        </div>
-      </div>
-    `;
+  menu.querySelectorAll(".nav-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("show");
+      toggler.setAttribute("aria-expanded", "false");
+    });
   });
 }
 
-carregarFilmes();
+document.addEventListener("DOMContentLoaded", () => {
+  configurarMenuMobile();
+});

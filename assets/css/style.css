@@ -1,247 +1,334 @@
-@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;800&family=Inter:wght@300;400;500;600&display=swap");
-
+/* 1. Tema geral: cores, fontes e variaveis do Bootstrap */
 :root {
-  --bg-color: #111417;
-  --surface-low: #191c1f;
-  --surface-high: #323538;
-  --primary: #ffb5a0;
-  --primary-container: #d43800;
-  --secondary: #fff9ef;
-  --text-on-surface: #e1e2e7;
-  --outline-ghost: rgba(175, 135, 130, 0.15);
-
-  --font-display: "Epilogue", sans-serif;
-  --font-body: "Inter", sans-serif;
+  --filmio-primary: #d43800;
+  --filmio-primary-soft: #ffb5a0;
+  --filmio-bg: #111417;
+  --filmio-surface: #191c1f;
+  --filmio-text: #e1e2e7;
+  --filmio-muted: #a9adb6;
+  --filmio-border: rgba(255, 181, 160, 0.18);
+  --bs-body-bg: var(--filmio-bg);
+  --bs-body-color: var(--filmio-text);
+  --bs-body-font-family: "Inter", system-ui, sans-serif;
+  --bs-primary: var(--filmio-primary);
+  --bs-primary-rgb: 212, 56, 0;
+  --bs-link-color: var(--filmio-primary-soft);
+  --bs-link-hover-color: #ffd7cd;
 }
 
 body {
-  font-family: var(--font-body);
-  background-color: var(--bg-color);
-  color: var(--text-on-surface);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  background-image: radial-gradient(
-    circle at 50% 0%,
-    rgba(212, 56, 0, 0.08) 0%,
-    transparent 60%
-  );
-  background-attachment: fixed;
+  background: radial-gradient(circle at top left, rgba(212, 56, 0, 0.16), transparent 28rem), var(--filmio-bg);
 }
 
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
-.brand-font {
-  font-family: var(--font-display);
+h4 {
+  font-family: "Epilogue", "Inter", system-ui, sans-serif;
 }
 
-/* Glassmorphism Navbar */
-.custom-navbar {
-  background: rgba(17, 20, 23, 0.7) !important;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--outline-ghost);
-  z-index: 1030;
+.text-secondary {
+  color: var(--filmio-muted) !important;
 }
 
-.custom-navbar .navbar-brand {
-  font-weight: 800;
-  font-family: var(--font-display);
-  color: var(--primary) !important;
-  font-size: 1.5rem;
-  letter-spacing: -0.5px;
+/* 2. Marca: logo no menu, rodape e telas de login/cadastro */
+.brand-mark {
+  align-items: center;
+  color: var(--filmio-text);
+  display: inline-flex;
+  font-family: "Epilogue", "Inter", system-ui, sans-serif;
+  font-weight: 700;
+
+  &:hover {
+    color: var(--filmio-primary-soft);
+  }
+
+  & img {
+    display: block;
+    height: 2.4rem;
+    object-fit: contain;
+    width: auto;
+  }
 }
 
-.custom-navbar .nav-link {
-  color: var(--secondary) !important;
-  font-weight: 500;
-  transition: color 0.3s;
+.footer-brand img {
+  height: 2rem;
 }
 
-.custom-navbar .nav-link:hover {
-  color: var(--primary) !important;
+.auth-brand img {
+  height: 4rem;
 }
 
-.icon {
-  height: 40px;
-  width: auto;
+/* 3. Navbar e rodape */
+.filmio-navbar {
+  backdrop-filter: blur(50px);
+  background-color: var(--filmio-surface);
+  border-bottom: 1px solid var(--filmio-border);
 }
 
-/* Glass & Gradient Inputs */
-.form-control.glass-input {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--outline-ghost);
-  color: var(--secondary);
-  backdrop-filter: blur(10px);
+.filmio-footer {
+  background-color: var(--filmio-surface);
+  border-top: 1px solid var(--filmio-border);
+  color: var(--filmio-muted) !important;
+  padding: 2rem 0;
 }
 
-.form-control.glass-input:focus {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: var(--primary);
-  box-shadow: 0 0 15px rgba(212, 56, 0, 0.3);
-  color: var(--secondary);
+.navbar-nav {
+    backdrop-filter: blur(50px);
+
+  & .nav-link:is(.active, :hover) {
+    color: var(--filmio-primary-soft);
+  }
 }
 
-.form-control.glass-input::placeholder {
-  color: rgba(255, 249, 239, 0.5);
+/* 4. Botoes e formularios */
+.btn {
+  font-weight: 700;
+  
 }
 
-/* Primary Button Glow */
-.btn-primary-glow {
-  background: linear-gradient(135deg, var(--primary), var(--primary-container));
-  border: none;
-  color: #111417;
-  font-weight: 600;
-  border-radius: 6px;
-  padding: 0.5rem 1.5rem;
-  transition:
-    transform 0.2s,
-    box-shadow 0.3s;
+.btn-primary {
+  --bs-btn-bg: var(--filmio-primary);
+  --bs-btn-border-color: var(--filmio-primary);
+  --bs-btn-hover-bg: #f05a1e;
+  --bs-btn-hover-border-color: #f05a1e;
 }
 
-.btn-primary-glow:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(212, 56, 0, 0.4);
-  color: #111417;
+.btn-dark {
+  background-color: var(--filmio-surface);
+  border-color: var(--filmio-border) !important;
 }
 
-/* Empty Ghost Button */
-.btn-ghost {
-  background: transparent;
-  border: 1px solid var(--outline-ghost);
-  color: var(--secondary);
-  border-radius: 6px;
-  transition: all 0.3s;
+.form-control {
+  background-color: var(--filmio-surface);
+  border-color: var(--filmio-border) !important;
+  color: var(--filmio-text);
+
+  &::placeholder {
+    color: rgba(225, 226, 231, 0.45);
+  }
+
+  &:focus {
+    border-color: var(--filmio-primary-soft);
+    box-shadow: 0 0 0 0.2rem rgba(212, 56, 0, 0.22);
+  }
 }
 
-.btn-ghost:hover {
-  border-color: var(--primary);
-  color: var(--primary);
-  background: rgba(255, 181, 160, 0.05);
+.form-select {
+  background-color: var(--filmio-surface);
+  border-color: var(--filmio-border) !important;
+  color: var(--filmio-text);
 }
 
-/* Cards Gallery */
-.movie-card {
-  background: var(--surface-low);
-  border: none;
-  border-radius: 8px;
+.search-form {
+  max-width: 22rem;
+  position: relative;
+  width: 100%;
+
+  & .bi {
+    color: var(--filmio-muted);
+    left: 0.9rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  & input {
+    padding-left: 2.5rem;
+  }
+}
+
+/* 5. Textos pequenos de destaque */
+.chip {
+  background-color: rgba(255, 181, 160, 0.1);
+  border: 1px solid var(--filmio-border);
+  border-radius: 999px;
+  color: var(--filmio-primary-soft);
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.75rem;
+  text-transform: uppercase;
+}
+
+.eyebrow {
+  color: var(--filmio-primary-soft);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* 6. Espacamento das paginas e secoes */
+.section-block {
+  padding: 6rem 0 4rem;
+}
+
+.page-shell {
+  padding: 6rem 0 4rem;
+}
+
+.section-muted {
+  background-color: rgba(25, 28, 31, 0.55);
+}
+
+.section-heading {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+
+  @media (max-width: 575.98px) {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+/* 7. Hero da home e hero da tela de detalhes */
+.hero-section {
+  min-height: 42rem;
   overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  cursor: pointer;
   position: relative;
 }
 
-.movie-card:hover {
-  transform: scale(1.05) translateY(-5px);
-  z-index: 10;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+.hero-backdrop {
+  background: linear-gradient(90deg, rgba(17, 20, 23, 0.96), rgba(17, 20, 23, 0.72), rgba(17, 20, 23, 0.95)), url("https://image.tmdb.org/t/p/original/4HodYYKEIsGOdinkGi2Ucz6X9i0.jpg") center / cover;
+  inset: 0;
+  position: absolute;
+}
+
+.details-hero {
+  min-height: 42rem;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    background: linear-gradient(90deg, rgba(17, 20, 23, 1), rgba(17, 20, 23, 0.78));
+    content: "";
+    inset: 0;
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+.details-hero-bg {
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  opacity: 0.55;
+  position: absolute;
+  width: 100%;
+}
+
+.details-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* 8. Cards, posters e selos dos filmes */
+.movie-card-title {
+  color: var(--filmio-text);
+  font-weight: 700;
+}
+
+.movie-meta {
+  color: var(--filmio-muted) !important;
 }
 
 .movie-poster {
-  width: 100%;
-  aspect-ratio: 2/3;
+  aspect-ratio: 2 / 3;
+  background-color: var(--filmio-surface);
+  border: 1px solid var(--filmio-border);
+  border-radius: 0.75rem;
   object-fit: cover;
-  transition: filter 0.3s;
+  overflow: hidden;
+  position: relative;
+
+  & img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
 }
 
-.movie-card:hover .movie-poster {
-  filter: brightness(0.7);
+.details-poster {
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
 }
 
-.movie-info {
+.rating-badge {
+  background-color: rgba(17, 20, 23, 0.82);
+  border: 1px solid var(--filmio-border);
+  border-radius: 999px;
+  color: var(--filmio-text);
+  left: 0.75rem;
+  padding: 0.25rem 0.55rem;
   position: absolute;
-  bottom: -100px; /* Hidden by default */
-  left: 0;
-  width: 100%;
+  top: 0.75rem;
+}
+
+.favorite-action {
+  background-color: rgba(17, 20, 23, 0.82);
+  border: 1px solid var(--filmio-border);
+  border-radius: 999px;
+  color: var(--filmio-text);
+  display: grid;
+  height: 2.25rem;
+  place-items: center;
+  position: absolute;
+  right: 0.75rem;
+  top: 0.75rem;
+  width: 2.25rem;
+
+  &.is-active {
+    background-color: var(--filmio-primary);
+  }
+}
+
+.spotlight-panel {
+  background-color: var(--filmio-surface);
+  border: 1px solid var(--filmio-border);
+  border-radius: 0.75rem;
   padding: 1.5rem;
-  background: linear-gradient(to top, var(--surface-high) 50%, transparent);
-  transition: bottom 0.3s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-.movie-card:hover .movie-info {
-  bottom: 0;
+.auth-card {
+  background-color: var(--filmio-surface);
+  border: 1px solid var(--filmio-border);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
 }
 
-.movie-title {
-  color: var(--secondary);
-  font-family: var(--font-display);
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
-  text-align: center;
+.fact-card {
+  background-color: var(--filmio-surface);
+  border: 1px solid var(--filmio-border);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
 }
 
-/* Section Margins */
-.content-wrapper {
-  flex: 1;
-  padding-top: 100px;
-  padding-bottom: 50px;
+.empty-state {
+  background-color: var(--filmio-surface);
+  border: 1px solid var(--filmio-border);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
 }
 
-/* Hero Section (Details Page) */
-.hero-movie {
-  position: relative;
+.movie-rail {
+  display: grid;
+  gap: 1rem;
+  grid-auto-columns: minmax(11rem, 15rem);
+  grid-auto-flow: column;
+  overflow-x: auto;
+}
+
+/* 9. Telas de login e cadastro */
+.auth-body {
+  min-height: 100vh;
+}
+
+.auth-shell {
+  max-width: 28rem;
   width: 100%;
-  height: 60vh;
-  min-height: 400px;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: flex-end;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to top,
-    var(--bg-color) 0%,
-    rgba(17, 20, 23, 0.4) 100%
-  );
-}
-
-.hero-content {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  padding-bottom: 3rem;
-}
-
-/* Footer */
-footer {
-  background: var(--surface-low);
-  padding: 2rem 0;
-  text-align: center;
-  backdrop-filter: blur(10px);
-  font-size: 0.9rem;
-  border-top: 1px solid var(--outline-ghost);
-}
-
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: var(--bg-color);
-}
-::-webkit-scrollbar-thumb {
-  background-color: var(--surface-high);
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background-color: var(--primary);
-}
-.logo {
-  height: 40px;
-  max-width: 768px;
-  display: block;
-  flex-wrap: nowrap;
 }
