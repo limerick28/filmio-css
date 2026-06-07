@@ -20,8 +20,13 @@ body {
   background: radial-gradient(circle at top left, rgba(212, 56, 0, 0.16), transparent 28rem), var(--filmio-bg);
 }
 
-h1,
-h2,
+h1 {
+  font-size: clamp(2.25rem, 6vw, 4.5rem);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
 h3,
 h4 {
   font-family: "Epilogue", "Inter", system-ui, sans-serif;
@@ -84,7 +89,16 @@ h4 {
 /* 4. Botoes e formularios */
 .btn {
   font-weight: 700;
-  
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease, border-color 180ms ease, color 180ms ease;
+
+  &:hover {
+    box-shadow: 0 0.6rem 1.4rem rgba(0, 0, 0, 0.22);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
 }
 
 .btn-primary {
@@ -231,6 +245,7 @@ h4 {
 .movie-card-title {
   color: var(--filmio-text);
   font-weight: 700;
+  transition: color 180ms ease;
 }
 
 .movie-meta {
@@ -238,19 +253,35 @@ h4 {
 }
 
 .movie-poster {
-  aspect-ratio: 2 / 3;
+  aspect-ratio: 3 / 4;
   background-color: var(--filmio-surface);
   border: 1px solid var(--filmio-border);
   border-radius: 0.75rem;
   object-fit: cover;
   overflow: hidden;
   position: relative;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 
   & img {
     height: 100%;
     object-fit: cover;
+    transition: transform 220ms ease;
     width: 100%;
   }
+}
+
+.movie-card:hover .movie-poster {
+  border-color: rgba(255, 181, 160, 0.38);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.28);
+  transform: translateY(-3px);
+}
+
+.movie-card:hover .movie-poster img {
+  transform: scale(1.03);
+}
+
+.movie-card:hover .movie-card-title {
+  color: var(--filmio-primary-soft);
 }
 
 .details-poster {
@@ -292,6 +323,7 @@ h4 {
   border: 1px solid var(--filmio-border);
   border-radius: 0.75rem;
   padding: 1.5rem;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
 .auth-card {
@@ -299,6 +331,7 @@ h4 {
   border: 1px solid var(--filmio-border);
   border-radius: 0.75rem;
   padding: 1.5rem;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
 .fact-card {
@@ -306,6 +339,7 @@ h4 {
   border: 1px solid var(--filmio-border);
   border-radius: 0.75rem;
   padding: 1.5rem;
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
 .empty-state {
@@ -313,6 +347,14 @@ h4 {
   border: 1px solid var(--filmio-border);
   border-radius: 0.75rem;
   padding: 1.5rem;
+}
+
+.spotlight-panel:hover,
+.auth-card:hover,
+.fact-card:hover {
+  border-color: rgba(255, 181, 160, 0.34);
+  box-shadow: 0 0.9rem 1.8rem rgba(0, 0, 0, 0.22);
+  transform: translateY(-2px);
 }
 
 .movie-rail {
